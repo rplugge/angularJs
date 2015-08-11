@@ -11,6 +11,12 @@ function($stateProvider, $urlRouterProvider) {
       controller: 'MainCtrl'
     });
     
+    .state('posts', {
+      url: '/posts/{id}',
+      templateUrl: '/posts.html',
+      controller: 'PostsCtrl'
+    })
+    
   $urlRouterProvider.otherwise('home');
 }])
 
@@ -41,3 +47,11 @@ function($stateProvider, $urlRouterProvider) {
     };
   }
 ]);
+
+.controller('PostsCtrl', [
+  '$scope',
+  '$stateParams',
+  'posts',
+  function($scope, $stateParams, posts){
+    
+}]);
