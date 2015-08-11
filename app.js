@@ -1,4 +1,7 @@
 angular.module('flapperNews', [])
+.factory('posts', [fucntion(){
+  
+}])
 .controller('MainCtrl', [
   '$scope',
   function($scope){
