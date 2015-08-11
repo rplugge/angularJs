@@ -8,13 +8,13 @@ function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/home',
       templateUrl: '/home.html',
-      controller: 'MainCtril'
+      controller: 'MainCtrl'
     });
     
   $urlRouterProvider.otherwise('home');
 }])
 
-.factory('posts', [fucntion(){
+.factory('posts', [function(){
   var o = {
     posts: []
   };
