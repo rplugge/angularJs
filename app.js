@@ -1,4 +1,4 @@
-angular.module('flapperNews', [])
+angular.module('flapperNews', ['ui.router'])
 .factory('posts', [fucntion(){
   var o = {
     posts: []
