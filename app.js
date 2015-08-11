@@ -1,10 +1,26 @@
 angular.module('flapperNews', ['ui.router'])
+.config([
+'$stateProvider',
+'$urlRouterProvider',
+function($stateProvider, $urlRouterProvider) {
+  
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: '/home.html',
+      controller: 'MainCtril'
+    });
+    
+  $urlRouterProvider.otherwise('home');
+}])
+
 .factory('posts', [fucntion(){
   var o = {
     posts: []
   };
   return o;
 }])
+
 .controller('MainCtrl', [
   '$scope',
   'posts',
