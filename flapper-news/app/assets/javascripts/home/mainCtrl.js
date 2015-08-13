@@ -12,9 +12,9 @@ angular.module('flapperNews')
       });
       $scope.title = '';
       $scope.link = '';
-    };  
+    }  
     $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
+      post.upvote(post);
     };
   }
 ])
